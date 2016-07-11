@@ -1,0 +1,27 @@
+.welcome-page {
+  padding-top: 40%;
+
+  .logo {
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+    margin-bottom: 20px;
+    margin-left: -232.5px;
+    background: url('../../../assets/konga-logo.png') center center no-repeat;
+    background-size: 100% 100%;
+    width: 465px;
+    height: 142.75px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .author {
+    text-align: center;
+  }
+
+
+}

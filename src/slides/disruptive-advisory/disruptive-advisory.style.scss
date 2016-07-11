@@ -1,0 +1,67 @@
+.disruptive-page {
+
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    background: url('../../../assets/konga-logo.png') center center no-repeat;
+    background-size: 100% 100%;
+    width: 162.5px;
+    height: 50px;
+  }
+
+  .disruptive-advisory {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -320px;
+    width: 640px;
+    height: 360px;
+    background: url('../../../assets/disruptive-content.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    transition: opacity 0.2s ease-in-out;
+  }
+
+
+  .disruptive-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    background: url('../../../assets/disruptive-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .lean-icon {
+    position: absolute;
+    top: 75px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+    background: url('../../../assets/lean-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &.step-0 {
+    .disruptive-icon,
+    .lean-icon{
+      opacity: 0;
+    }
+  }
+
+  &:not(.step-0) {
+    .logo,
+    .disruptive-advisory {
+      opacity: 0;
+    }
+  }
+}
