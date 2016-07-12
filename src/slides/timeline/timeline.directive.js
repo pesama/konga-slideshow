@@ -26,6 +26,22 @@ export class TimelineDirective {
             scope.step = '2007';
         });
 
+        scope.$on('timeline-2012', (evt, data) => {
+            scope.step = '2012';
+        });
+
+        scope.$on('timeline-2012-undo', (evt, data) => {
+            scope.step = '2010';
+        });
+
+        scope.$on('timeline-2014', (evt, data) => {
+            scope.step = '2014';
+        });
+
+        scope.$on('timeline-2014-undo', (evt, data) => {
+            scope.step = '2012';
+        });
+
         scope.$on('timeline-hide', (evt, data) => {
             scope.hidden = true;
         });

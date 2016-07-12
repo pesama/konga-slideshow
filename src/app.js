@@ -159,6 +159,43 @@ angular.module('konga-slideshow', [
             data: {}
         },
         {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_IMPRESS_PREVIOUS
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-dev-growing-2',
+            data: {},
+            options: {
+                auto_next: true,
+                auto_next_duration: 0
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'timeline-2012',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'context-rampagejs'
+            }
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'context'
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'timeline-2014',
+            data: {}
+        },
+        {
             type: Script.STEP_DISPATCH_EVENT,
             event: 'context-api-awareness',
             data: {},
@@ -196,6 +233,15 @@ angular.module('konga-slideshow', [
             type: Script.STEP_DISPATCH_EVENT,
             event: 'context-apis-misc',
             data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'context-puzzle'
+            }
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
         },
 
     ], $rootScope);

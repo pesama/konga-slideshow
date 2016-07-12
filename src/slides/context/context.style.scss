@@ -9,22 +9,30 @@
     position: absolute;
     bottom: 200px;
     left: 50%;
-    margin-left: -30px;
-    width: 100px;
-    height: 100px;
+    margin-left: -5px;
+    width: 50px;
+    height: 50px;
     z-index: 1000;
     transition: width 3s ease-in-out, height 3s ease-in-out, margin 3s ease-in-out, bottom 1.5s ease-in-out;
   }
 
   &.step-growing {
     .developer {
-      width: 300px;
-      height: 300px;
-      margin-left: -130px;
+      width: 150px;
+      height: 150px;
+      margin-left: -55px;
     }
   }
 
-  &:not(.step-growing):not(.step-) {
+  &.step-growing-2 {
+    .developer {
+      width: 250px;
+      height: 250px;
+      margin-left: -105px;
+    }
+  }
+
+  &:not(.step-growing):not(.step-growing-2):not(.step-) {
     .developer {
       bottom: 50%;
       width: 200px;

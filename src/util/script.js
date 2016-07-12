@@ -6,6 +6,7 @@ export class Script {
 
     static STEP_IMPRESS_NEXT = 'impress-next';
     static STEP_IMPRESS_PREVIOUS = 'impress-previous';
+    static STEP_IMPRESS_GOTO = 'impress-goto';
     static STEP_CONSOLE_LOG = 'console-log';
     static STEP_DISPATCH_EVENT = 'dispatch-event';
 
@@ -49,6 +50,15 @@ export class Script {
                 }
                 else {
                     impress().next();
+                }
+                break;
+            case Script.STEP_IMPRESS_GOTO:
+                if(!inverse) {
+                    step.data.old_index = this.index;
+                    impress().goto(step.data.target);
+                }
+                else {
+                    this.index = step.data.old_index;
                 }
                 break;
             case Script.STEP_DISPATCH_EVENT:

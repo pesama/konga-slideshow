@@ -25,6 +25,14 @@ export class ContextDirective {
             scope.step = '';
         });
 
+        scope.$on('context-dev-growing-2', (evt, data) => {
+            scope.step = 'growing-2';
+        });
+
+        scope.$on('context-dev-growing-2-undo', (evt, data) => {
+            scope.step = 'growing';
+        });
+
         scope.$on('context-api-awareness', (evt, data) => {
             scope.step = 'api-aware';
         });

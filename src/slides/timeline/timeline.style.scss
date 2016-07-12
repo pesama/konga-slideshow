@@ -89,6 +89,18 @@
     }
   }
 
+  &.step-2012 {
+    .timeline {
+      left: -10000px;
+    }
+  }
+
+  &.step-2014 {
+    .timeline {
+      left: -14000px;
+    }
+  }
+
   .y2007 {
     position: absolute;
     bottom: 50px;
@@ -158,6 +170,82 @@
     &:after {
       display: block;
       content: '2010';
+      font-size: 0.6em;
+      margin-top: -0.2em;
+      margin-left: 0.5em;
+      color: #787878;
+    }
+  }
+
+  .y2011 {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: 8015px;
+    width: 10px;
+    height: 100px;
+    background: #222;
+
+    &:after {
+      display: block;
+      content: '2011';
+      font-size: 0.6em;
+      margin-top: -0.2em;
+      margin-left: 0.5em;
+      color: #787878;
+    }
+  }
+
+  .y2012 {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: 10015px;
+    width: 10px;
+    height: 100px;
+    background: #222;
+
+    &:after {
+      display: block;
+      content: '2012';
+      font-size: 0.6em;
+      margin-top: -0.2em;
+      margin-left: 0.5em;
+      color: #787878;
+    }
+  }
+
+  .y2013 {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: 12015px;
+    width: 10px;
+    height: 100px;
+    background: #222;
+
+    &:after {
+      display: block;
+      content: '2013';
+      font-size: 0.6em;
+      margin-top: -0.2em;
+      margin-left: 0.5em;
+      color: #787878;
+    }
+  }
+
+  .y2014 {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: 14015px;
+    width: 10px;
+    height: 100px;
+    background: #222;
+
+    &:after {
+      display: block;
+      content: '2014';
       font-size: 0.6em;
       margin-top: -0.2em;
       margin-left: 0.5em;
