@@ -19,6 +19,6 @@ import './index.html';
 import '../impress/js/impress';
 import '../impress/css/impress-demo.css';
 
-// JSPlumb
-import 'jsplumb';
-
+// Deps
+import 'jquery';
+import '../node_modules/jsplumb/dist/js/jsPlumb-2.1.4-min';

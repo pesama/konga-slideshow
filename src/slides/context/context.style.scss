@@ -1,0 +1,131 @@
+.context-page {
+  width: 1024px;
+  height: 768px;
+  margin: auto;
+
+  .developer {
+    background: url('../../../assets/apis-dev-icon.png') center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    margin-left: -30px;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+    transition: width 3s ease-in-out, height 3s ease-in-out, margin 3s ease-in-out, bottom 1.5s ease-in-out;
+  }
+
+  &.step-growing {
+    .developer {
+      width: 300px;
+      height: 300px;
+      margin-left: -130px;
+    }
+  }
+
+  &:not(.step-growing):not(.step-) {
+    .developer {
+      bottom: 50%;
+      width: 200px;
+      height: 200px;
+      margin-left: -80px;
+      margin-bottom: -100px;
+    }
+  }
+
+  .apis {
+    z-index: 1;
+
+    .api {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+
+      &.api-social {
+        top: 50px;
+        left: 10px;
+        width: 40%;
+        height: 40%;
+        background: url('../../../assets/apis-social.png') center center no-repeat;
+        background-size: 100% auto;
+      }
+
+      &.api-info {
+        top: 50px;
+        left: 41.5%;
+        width: 20%;
+        height: 30%;
+        background: url('../../../assets/apis-information.png') center top no-repeat;
+        background-size: 100% auto;
+      }
+
+      &.api-storage {
+        top: 30%;
+        left: 60%;
+        width: 20%;
+        height: 30%;
+        background: url('../../../assets/apis-databases.png') center top no-repeat;
+        background-size: 100% auto;
+      }
+
+      &.api-platform {
+        bottom: 80px;
+        left: 90px;
+        width: 70%;
+        height: 30%;
+        background: url('../../../assets/apis-platform.png') center top no-repeat;
+        background-size: 100% auto;
+      }
+
+      &.api-misc {
+        bottom: 25%;
+        left: 60%;
+        width: 30%;
+        height: 30%;
+        background: url('../../../assets/apis-misc.png') center top no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+
+  &.step-api-social {
+    .api-social {
+      opacity: 1
+    }
+  }
+
+  &.step-api-info {
+    .api-social,
+    .api-info {
+      opacity: 1
+    }
+  }
+
+  &.step-api-storage {
+    .api-social,
+    .api-info,
+    .api-storage {
+      opacity: 1
+    }
+  }
+
+  &.step-api-platform {
+    .api-social,
+    .api-info,
+    .api-storage,
+    .api-platform {
+      opacity: 1
+    }
+  }
+
+  &.step-api-misc {
+    .api-social,
+    .api-info,
+    .api-storage,
+    .api-platform,
+    .api-misc {
+      opacity: 1
+    }
+  }
+}

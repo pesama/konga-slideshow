@@ -65,6 +65,22 @@ export class Script {
                 console.log(step.data);
                 break;
         }
+
+        const that = this;
+
+        if(!inverse && step.options && step.options.auto_next) {
+            setTimeout(() => {
+                that.next();
+                that.root.$apply();
+            }, step.options.auto_next_duration || 500);
+
+        }
+        if(inverse && this.steps[this.index-1].options && this.steps[this.index-1].options.auto_next) {
+            setTimeout(() => {
+                that.previous();
+                that.root.$apply();
+            }, this.steps[this.index-1].options.auto_next_duration || 500);
+        }
     }
 }
 

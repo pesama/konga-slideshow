@@ -4,10 +4,14 @@
 
 import welcome from './welcome';
 import disruptive from './disruptive-advisory';
-// import toc from './toc';
+import toc from './toc';
+import context from './context';
+import timeline from './timeline';
 
 module.exports = {
     welcome,
-    disruptive
-    // toc
+    disruptive,
+    toc,
+    context,
+    timeline
 };

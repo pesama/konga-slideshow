@@ -1,0 +1,66 @@
+.toc-page {
+  h1 {
+    color: #aaa;
+  }
+
+  .content {
+    margin-top: 150px;
+    margin-left: 150px;
+
+    h2 {
+      color: #787878;
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    .subtitle {
+      color: #aaa;
+      font-size: 0.8em;
+      opacity: 0;
+
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+
+  &.step-context {
+    .context-subtitle {
+      opacity: 1;
+    }
+  }
+
+  &.step-government {
+    .government-subtitle {
+      opacity: 1;
+    }
+  }
+
+  &.step-architecture {
+    .architecture-subtitle {
+      opacity: 1;
+    }
+  }
+
+  &.step-development {
+    .development-subtitle {
+      opacity: 1;
+    }
+  }
+
+  &.step-deployment {
+    .deployment-subtitle {
+      opacity: 1;
+    }
+  }
+
+  &.step-closure {
+    .closure-subtitle {
+      opacity: 1;
+    }
+  }
+
+  &.step-qa {
+    .qa-subtitle {
+      opacity: 1;
+    }
+  }
+}

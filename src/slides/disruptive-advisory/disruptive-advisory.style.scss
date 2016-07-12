@@ -29,10 +29,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 100px;
-    height: 100px;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
     background: url('../../../assets/disruptive-icon.png') center center no-repeat;
     background-size: 100% 100%;
 
@@ -48,10 +48,178 @@
     background: url('../../../assets/lean-icon.png') center center no-repeat;
     background-size: 100% 100%;
 
+    transition: opacity 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+  }
+
+  .lean-title {
+    position: absolute;
+    top: 100px;
+    left: 260px;
+    font-size: 1.4em;
+    text-align: left;
+
     transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  .lean-topics {
+    position: absolute;
+    top: 140px;
+    left: 280px;
+
+    .topic {
+      &:nth-child(1) {
+        transition-delay: 1.5s;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 5s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 7s;
+      }
+
+      &:nth-child(4) {
+        transition-delay: 8s;
+      }
+    }
+  }
+
+  .tdd-icon {
+    position: absolute;
+    top: 75px;
+    right: 100px;
+    width: 150px;
+    height: 150px;
+    background: url('../../../assets/tdd-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    transition: opacity 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+  }
+
+  .tdd-title {
+    position: absolute;
+    top: 100px;
+    right: 260px;
+    font-size: 1.4em;
+    text-align: left;
+
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  .tdd-topics {
+    position: absolute;
+    top: 140px;
+    right: 280px;
+
+    .topic {
+      &:nth-child(1) {
+        transition-delay: 1.5s;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 3s;
+      }
+    }
+  }
+
+  .dev-icon {
+    position: absolute;
+    bottom: 75px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+    background: url('../../../assets/dev-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    transition: opacity 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+  }
+
+  .dev-title {
+    position: absolute;
+    bottom: 140px;
+    left: 260px;
+    font-size: 1.4em;
+    text-align: left;
+
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  .dev-topics {
+    position: absolute;
+    bottom: 100px;
+    left: 270px;
+
+    .topic {
+      &:nth-child(1) {
+        transition-delay: 1.5s;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 3s;
+      }
+    }
+  }
+
+  .prod-icon {
+    position: absolute;
+    bottom: 75px;
+    right: 100px;
+    width: 150px;
+    height: 150px;
+    background: url('../../../assets/prod-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    transition: opacity 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+  }
+
+
+  .prod-title {
+    position: absolute;
+    bottom: 140px;
+    right: 260px;
+    font-size: 1.4em;
+    text-align: left;
+
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  .prod-topics {
+    position: absolute;
+    bottom: 100px;
+    right: 270px;
+
+    .topic {
+      &:nth-child(1) {
+        transition-delay: 1.5s;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 3s;
+      }
+    }
   }
 
   &.step-0 {
+    .prod-icon,
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic,
+    .dev-title,
+    .dev-icon,
+    .dev-topics,
+    .dev-topics .topic,
+    .tdd-title,
+    .tdd-icon,
+    .tdd-topics,
+    .tdd-topics .topic,
+    .lean-title,
+    .lean-topics,
+    .lean-topics .topic,
     .disruptive-icon,
     .lean-icon{
       opacity: 0;
@@ -59,9 +227,197 @@
   }
 
   &:not(.step-0) {
-    .logo,
     .disruptive-advisory {
       opacity: 0;
+    }
+  }
+
+  &.step-1 {
+    .prod-icon,
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic,
+    .dev-title,
+    .dev-icon,
+    .dev-topics,
+    .dev-topics .topic,
+    .lean-title,
+    .lean-topics,
+    .lean-topics .topic,
+    .tdd-topics,
+    .tdd-topics .topic,
+    .lean-icon,
+    .tdd-title,
+    .tdd-icon{
+      opacity: 0;
+    }
+  }
+
+  &:not(.step-0):not(.step-1) {
+    .lean-icon {
+      opacity: 1;
+    }
+
+    .logo {
+      opacity: 0;
+    }
+
+    .disruptive-icon {
+      opacity: 0.5;
+    }
+  }
+
+  &.step-2 {
+    .lean-title,
+    .lean-topics,
+    .lean-topics .topic {
+      opacity: 1;
+    }
+
+    .prod-icon,
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic,
+    .dev-title,
+    .dev-icon,
+    .dev-topics,
+    .dev-topics .topic,
+    .tdd-title,
+    .tdd-icon,
+    .tdd-topics,
+    .tdd-topics .topic {
+      opacity: 0;
+    }
+  }
+
+  &:not(.step-0):not(.step-1):not(.step-2) {
+    .lean-icon {
+      opacity: 1;
+      width: 75px;
+      height: 75px;
+    }
+
+    .lean-title,
+    .lean-topics {
+      display: none;
+    }
+  }
+
+  &.step-3 {
+    .tdd-title,
+    .tdd-icon,
+    .tdd-topics,
+    .tdd-topics .topic {
+      opacity: 1;
+    }
+
+    .prod-icon,
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic,
+    .dev-title,
+    .dev-icon,
+    .dev-topics,
+    .dev-topics .topic {
+      opacity: 0;
+    }
+  }
+
+  &:not(.step-0):not(.step-1):not(.step-2):not(.step-3) {
+    .tdd-icon {
+      width: 75px;
+      height: 75px;
+    }
+
+    .tdd-title,
+    .tdd-topics,
+    .tdd-topics .topic {
+      display: none;
+    }
+  }
+
+  &.step-4 {
+    .dev-title,
+    .dev-icon,
+    .dev-topics,
+    .dev-topics .topic {
+      opacity: 1;
+    }
+
+    .prod-icon,
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic {
+      opacity: 0;
+    }
+  }
+
+  &:not(.step-0):not(.step-1):not(.step-2):not(.step-3):not(.step-4) {
+    .dev-title,
+    .dev-topics,
+    .dev-topics .topic {
+      display: none
+    }
+
+    .dev-icon {
+      opacity: 1;
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &.step-5 {
+    .prod-icon,
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic {
+      opacity: 1
+    }
+  }
+
+  &:not(.step-0):not(.step-1):not(.step-2):not(.step-3):not(.step-4):not(.step-5) {
+
+    .prod-title,
+    .prod-topics,
+    .prod-topics .topic {
+      display: none;
+    }
+
+    .prod-icon {
+      width: 75px;
+      height: 75px;
+      opacity: 1;
+    }
+  }
+
+  .topic {
+    font-size: 0.8em;
+    font-weight: 200;
+    padding: 0 2px;
+    transition: opacity 0.5s ease-in-out;
+
+    &.blue-topic {
+      color: #40BEFF;
+    }
+
+    &.dark-grey-topic {
+      color: #666;
+    }
+
+    &.green-topic {
+      color: #3dc44c;
+    }
+
+    &.light-gray-topic {
+      color: #aaa;
+    }
+
+    &.orange-topic {
+      color: #ffc251;
+    }
+
+    &.red-topic {
+      color: #aa0e11;
     }
   }
 }

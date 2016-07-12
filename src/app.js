@@ -74,7 +74,129 @@ angular.module('konga-slideshow', [
             data: {}
         },
         {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'lean-explanation',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'tdd-explanation',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'dev-explanation',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'prod-explanation',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'disruptive-end',
+            data: {}
+        },
+        {
             type: Script.STEP_IMPRESS_NEXT
-        }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-context',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-government',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-architecture',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-development',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-deployment',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-closure',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-qa',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'toc-finish',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-dev-growing',
+            data: {},
+            options: {
+                auto_next: true,
+                auto_next_duration: 0
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'timeline-2010',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-api-awareness',
+            data: {},
+            options: {
+                auto_next: true,
+                auto_next_duration: 500
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'timeline-hide',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-apis-social',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-apis-info',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-apis-storage',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-apis-platform',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'context-apis-misc',
+            data: {}
+        },
+
     ], $rootScope);
 }]);
