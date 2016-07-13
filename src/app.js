@@ -243,6 +243,12 @@ angular.module('konga-slideshow', [
         {
             type: Script.STEP_IMPRESS_NEXT
         },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
 
     ], $rootScope);
 }]);
