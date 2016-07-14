@@ -1,0 +1,114 @@
+.architecture-engine-page {
+  width: 1024px;
+  height: 768px;
+  margin: auto;
+
+
+  .questions {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    transition: opacity 0.2s ease-in-out;
+
+    li {
+      list-style: circle;
+      color: #aaa;
+    }
+  }
+
+  .model {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    width: 80%;
+    bottom: 50px;
+    background: url('../../../assets/konga-deployment.jpg') center center no-repeat;
+    background-size: contain;
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out, left 1s ease-in-out, width 1s ease-in-out, transform 1s ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  &.step-data {
+    li.data {
+      color: #222;
+    }
+  }
+
+  &.step-existing {
+    li.existing {
+      color: #222;
+    }
+  }
+
+  &.step-custom {
+    li.custom {
+      color: #222;
+    }
+  }
+
+  &.step-federate {
+    li.federate {
+      color: #222;
+    }
+  }
+
+  &:not(.step-init):not(.step-data):not(.step-existing):not(.step-custom):not(.step-federate) {
+    .questions {
+      opacity: 0;
+    }
+  }
+
+  &.step-model {
+    .model {
+      opacity: 1;
+    }
+  }
+
+  &.step-annotations {
+    .model {
+      opacity: 1;
+      left: 150px;
+      width: 50%;
+    }
+
+    .annotation-fwk {
+      opacity: 1;
+    }
+  }
+
+  &.step-maven {
+    .model {
+      opacity: 1;
+      left: 150px;
+      width: 50%;
+    }
+
+    .annotation-fwk {
+      opacity: 1;
+    }
+
+    .maven-central {
+      opacity: 1;
+    }
+  }
+
+  &.step-rotate {
+    .model {
+      transform: rotate(-90deg);
+      opacity: 1;
+      left: 150px;
+      width: 50%;
+    }
+
+    .annotation-fwk {
+      transform: rotate(-90deg);
+      opacity: 1;
+    }
+
+    .maven-central {
+      opacity: 1;
+    }
+  }
+}

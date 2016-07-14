@@ -1,0 +1,72 @@
+.architecture-overview-page {
+  width: 1024px;
+  height: 768px;
+  margin: auto;
+
+  .page-splitter {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -2px;
+    width: 4px;
+    bottom: 10px;
+    background: #787878;
+  }
+
+  .metadata {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    right: 50%;
+    margin-right: 2px;
+    bottom: 0px;
+    overflow: hidden;
+
+    .title {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      padding: 0 100px 5px 20px;
+      border-bottom: 1px solid #787878;
+    }
+
+  }
+
+  .engine {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    right: 0px;
+    margin-keft: 2px;
+    bottom: 0px;
+    overflow: hidden;
+
+    .title {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 0 20px 5px 100px;
+      border-bottom: 1px solid #787878;
+    }
+  }
+
+  .title {
+    transition: left 1s ease-in-out, right 1s ease-in-out;
+  }
+
+  &.step-init {
+    .metadata .title {
+      right: -1000px;
+    }
+
+    .engine .title {
+      left: -1000px;
+    }
+  }
+
+  &.step-metadata {
+    .engine .title {
+      left: -1000px;
+    }
+  }
+}

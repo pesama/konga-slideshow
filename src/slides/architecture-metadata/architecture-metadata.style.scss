@@ -1,0 +1,149 @@
+.architecture-metadata-page {
+  width: 1024px;
+  height: 768px;
+  margin: auto;
+
+
+  .questions {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    transition: opacity 0.2s ease-in-out;
+
+    li {
+      list-style: circle;
+      color: #aaa;
+    }
+  }
+
+  .model {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 100%;
+    bottom: 50px;
+    background: url('../../../assets/konga-metadata.png') center center no-repeat;
+    background-size: contain;
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out, left 1s ease-in-out, width 1s ease-in-out, transform 1s ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  .annotation-fwk {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    margin-left: 50%;
+    width: 50%;
+    bottom: 50px;
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out, left 1s ease-in-out, width 1s ease-in-out, transform 1s ease-in-out;
+    transition-delay: 0.5s;
+
+    ul {
+      margin-left: 150px;
+
+      li {
+        list-style: circle;
+        font-weight: 200;
+      }
+    }
+
+    .maven-central {
+      position: absolute;
+      bottom: -100px;
+      right: 20%;
+      width: 80%;
+      height: 200px;
+      background: url('../../../assets/maven-central-icon.png') center top no-repeat;
+      background-size: 100% auto;
+      opacity: 0;
+
+      transition: opacity 1s ease-in-out;
+    }
+  }
+
+  &.step-data {
+    li.data {
+      color: #222;
+    }
+  }
+
+  &.step-relations {
+    li.relations {
+      color: #222;
+    }
+  }
+
+  &.step-custom {
+    li.custom {
+      color: #222;
+    }
+  }
+
+  &.step-generate {
+    li.generate {
+      color: #222;
+    }
+  }
+
+  &:not(.step-init):not(.step-data):not(.step-relations):not(.step-custom):not(.step-generate) {
+    .questions {
+      opacity: 0;
+    }
+  }
+
+  &.step-model {
+    .model {
+      opacity: 1;
+    }
+  }
+
+  &.step-annotations {
+    .model {
+      opacity: 1;
+      left: 150px;
+      width: 50%;
+    }
+
+    .annotation-fwk {
+      opacity: 1;
+    }
+  }
+
+  &.step-maven {
+    .model {
+      opacity: 1;
+      left: 150px;
+      width: 50%;
+    }
+
+    .annotation-fwk {
+      opacity: 1;
+    }
+
+    .maven-central {
+      opacity: 1;
+    }
+  }
+
+  &.step-rotate {
+    .model {
+      transform: rotate(-90deg);
+      opacity: 1;
+      left: 150px;
+      width: 50%;
+    }
+
+    .annotation-fwk {
+      transform: rotate(-90deg);
+      opacity: 1;
+    }
+
+    .maven-central {
+      opacity: 1;
+    }
+  }
+}

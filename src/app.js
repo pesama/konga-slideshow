@@ -249,6 +249,167 @@ angular.module('konga-slideshow', [
         {
             type: Script.STEP_IMPRESS_NEXT
         },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-init-metadata',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-data',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-relations',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-custom',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-generate',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-model',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-annotations',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-maven',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'architecture-overview'
+            },
+            options: {
+                auto_next: true,
+                auto_next_duration: 1500
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-metadata-rotate',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-init-engine',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'architecture-engine'
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-engine-data',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-engine-existing',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-engine-custom',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-engine-federate',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-engine-model',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'architecture-overview'
+            },
+            options: {
+                auto_next: true,
+                auto_next_duration: 1500
+            }
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'architecture-engine-rotate',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'government'
+            }
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'government-planning',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'government-users',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'government-presupuestor',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'government-csc',
+            data: {}
+        },
+        {
+            type: Script.STEP_DISPATCH_EVENT,
+            event: 'government-bbva',
+            data: {}
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_IMPRESS_NEXT
+        },
+        {
+            type: Script.STEP_IMPRESS_GOTO,
+            data: {
+                target: 'closure'
+            }
+        },
 
     ], $rootScope);
 }]);
