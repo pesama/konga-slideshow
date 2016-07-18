@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -11,18 +12,13 @@ module.exports = {
                 loader: 'style!css'
             },
             {
-                // JS LOADER
-                // Reference: https://github.com/babel/babel-loader
-                // Transpile .js files using babel-loader
-                // Compiles ES6 and ES7 into ES5 code
-                test : /\.js$/,
-                loader : 'babel-loader',
-                exclude : /node_modules/,
-                query : {
-                    presets : [ 'stage-0', 'stage-1', 'es2015' ],
-                    cacheDirectory : true,
-                    plugins : [ 'transform-runtime' ]
-                }
+                test: /\.scss$/,
+                loader: "style!css!sass"
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel'
             },
             {
                 test : /\.json$/,
@@ -47,16 +43,12 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx', '.css']
+        extensions: ['', '.js', '.jsx', '.css', '.scss']
     },
     output: {
         path: __dirname + '/../build',
         publicPath: '/',
         filename: 'konga-slideshow.js'
-    },
-    devServer: {
-        contentBase: './dist',
-        hot: true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -70,5 +62,10 @@ module.exports = {
         new webpack.optimize.DedupePlugin(),
 
         // new webpack.optimize.UglifyJsPlugin({minimize: true})
+
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            title: 'Konga Presentation'
+        })
     ]
 };
